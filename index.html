@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio of Jane Doe, a skilled front-end developer specializing in HTML, CSS, JavaScript, and React, showcasing projects, skills, and certifications.">
+  <title>Divyam | Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Favicon Placeholder -->
+  <link rel="icon" href="/assets/images/favicon.ico">
+  <!-- Custom Styles (for cursor, dark mode, etc.) will be added later -->
+</head>
+
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+  <!-- Dark/Light Theme Toggle Button -->
+  <button id="theme-toggle" aria-label="Toggle Dark Mode"
+    class="fixed bottom-6 right-6 z-50 bg-gray-200 dark:bg-gray-700 p-3 rounded-full shadow-lg hover:scale-110 transition">
+    <span id="theme-icon">🌙</span>
+  </button>
+
+  <!-- Navigation Bar -->
+  <nav
+    class="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur z-40 shadow-sm border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#home" class="text-xl font-bold tracking-tight">Divyam Misser</a>
+      <ul class="hidden md:flex space-x-8 font-medium">
+        <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+        <li><a href="#research" class="hover:text-blue-600 transition">Research</a></li>
+        <li><a href="#certificates" class="hover:text-blue-600 transition">Certificates</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home"
+    class="min-h-screen flex flex-col justify-center items-center text-center pt-32 pb-16 bg-gradient-to-b from-white via-gray-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <h1 class="text-2xl md:text-4xl font-extrabold mb-4" data-aos="fade-up">Hi, I'm Divyam, <span
+        class="text-blue-600">Cybersecurity Enthusiast</span></h1>
+    <p class="text-lg md:text-2xl text-gray-600 dark:text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="100">
+      Crafting skills to safeguard digital frontiers.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-4xl mx-auto py-20 px-4 flex flex-col md:flex-row items-center gap-10"
+    data-aos="fade-up">
+    <img src="https://placehold.co/200x200?text=Divyam" alt="Divyam"
+      class="w-40 h-40 rounded-full object-cover shadow-lg mb-6 md:mb-0" />
+    <div>
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">Hello, my name is Divyam Misser and I am a cybersecurity
+        student who enjoys discovering new tools and methods to secure digital environments. At the moment, I'm studying
+        how to overcome cyber threats and develop a solid foundation within this ever-evolving industry.</p>
+      <a href="/assets/pdf/Jane_Doe_Resume.pdf" download
+        class="inline-block mt-2 px-6 py-2 bg-blue-600 text-white rounded-full font-medium shadow hover:bg-blue-700 transition">Download
+        Resume</a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+      <div class="flex flex-wrap justify-center items-center gap-8">
+        <div class="flex flex-col items-center">
+          <img src="logo/pyhton-logo.png" alt="Python" class="skill-logo" />
+          <span class="mt-2 font-semibold">Python</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="logo/sql-logo.png" alt="SQL" class="skill-logo" />
+          <span class="mt-2 font-semibold">SQL</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="logo/cpp-logo.png" alt="C++" class="skill-logo" />
+          <span class="mt-2 font-semibold">C++</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="logo/html-logo.png" alt="HTML" class="skill-logo" />
+          <span class="mt-2 font-semibold">HTML</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="logo/css-logo.png" alt="CSS" class="skill-logo" />
+          <span class="mt-2 font-semibold">CSS</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="logo/js-logo.png" alt="JavaScript" class="skill-logo" />
+          <span class="mt-2 font-semibold">JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .skill-logo {
+      width: 90px;
+      height: 50px;
+      object-fit: contain;
+      transition: transform 0.2s;
+    }
+
+    .skill-logo:hover {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 600px) {
+      #skills .flex-wrap {
+        gap: 1.5rem;
+      }
+
+      .skill-logo {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+  <!-- End Skills Section -->
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-4" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col">
+          <img src="https://placehold.co/400x200?text=Authrix" alt="Authrix" class="rounded mb-4">
+          <h3 class="text-xl font-semibold mb-2">Authrix - Password Manager</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Frontend in HTML, CSS & JS — Backend powered by Python Flask.
+          </p>
+          <div class="mt-auto flex space-x-4">
+            <a href="https://github.com/DivyamM8/AUTHRIX" target="_blank"
+              class="text-gray-600 dark:text-gray-300 hover:underline">GitHub</a>
+          </div>
+        </div>
+        <!-- Project 2
+        <div class="bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col">
+          <img src="https://placehold.co/400x200?text=Task+Manager+App" alt="Task Manager App" class="rounded mb-4">
+          <h3 class="text-xl font-semibold mb-2">Task Manager App</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">JavaScript, CSS Grid, local storage. Manage your daily tasks efficiently.</p>
+          <div class="mt-auto flex space-x-4">
+            <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">GitHub</a>
+          </div>
+        </div>
+         Project 3 
+        <div class="bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col">
+          <img src="https://placehold.co/400x200?text=Portfolio+Website" alt="Portfolio Website" class="rounded mb-4">
+          <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">HTML, CSS, JavaScript. A personal portfolio to showcase projects and skills.</p>
+          <div class="mt-auto flex space-x-4">
+            <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">GitHub</a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="bg-gray-50 dark:bg-gray-800 py-20 px-4" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Research</h2>
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1">
+          <h3 class="text-xl font-semibold mb-2">AI-Powered Detection and Prevention of Deepfake Deception in Cyber
+            Influence Operations</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">Published in Journal of Research and Innovation in
+            Technology, Commerce and Management
+            Vol. 2 Issue 5, May 2025, pp. 2560-2564<br> ISSN: 3049-3129(Online)</p>
+          <a href="research/AI-Powered Detection and Prevention of Deepfake Deception in Cyber Influence Operations.pdf"
+            class="text-blue-600 hover:underline">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section
+  <section id="certificates" class="py-20 px-4" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Certificates</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="flex items-center bg-white dark:bg-gray-900 rounded-lg shadow p-4">
+          <span class="text-3xl mr-4">📜</span>
+          <div>
+            <h3 class="font-semibold">Certified React Developer</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Coursera, 2023</p>
+          </div>
+        </div>
+        <div class="flex items-center bg-white dark:bg-gray-900 rounded-lg shadow p-4">
+          <span class="text-3xl mr-4">♿</span>
+          <div>
+            <h3 class="font-semibold">Web Accessibility</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">W3C, 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-50 dark:bg-gray-800 py-20 px-4" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Contact</h2>
+
+
+      <div class="flex justify-center space-x-6">
+        <a href="https://www.linkedin.com/in/divyam-misser-565797353/" target="_blank" aria-label="Linkdin"
+          class="hover:text-blue-600 transition">
+          <img src="logo/linkdin-logo.png" alt="Linkdin" class=" h-12 rounded">
+        </a>  
+
+
+      <div class="flex justify-center space-x-6">
+        <a href="https://github.com/DivyamM8" target="_blank" aria-label="GitHub"
+          class="hover:text-blue-600 transition">
+          <img src="logo/github-logo.png" alt="GitHub" class=" h-12 rounded">
+        </a>
+
+        
+
+          <div  class="flex justify-center space-x-6">
+          <a href="https://mail.google.com/mail/?view=cm&to=divyammisser@gmail.com" target="_blank" aria-label="Email">
+  <img src="logo/email-logo.png" alt="Email" class="w-10 h-10 rounded cursor-pointer">
+</a>
+
+         </div>
+        
+        </div>
+      </div>
+  </section>
+
+
+  <!-- SCRIPTS: Theme, AOS, Smooth Scroll, Form Validation -->
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    function setTheme(dark) {
+      document.documentElement.classList.toggle('dark', dark);
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+      themeIcon.textContent = dark ? '☀️' : '🌙';
+    }
+    themeToggle.onclick = () => setTheme(!document.documentElement.classList.contains('dark'));
+    // On load
+    setTheme(localStorage.getItem('theme') === 'dark' || (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme')));
+
+    // Smooth Scroll
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // AOS Init
+    AOS.init({ once: true, duration: 700 });
+
+    // Contact Form Validation (Demo only)
+    document.getElementById('contact-form').onsubmit = function (e) {
+      e.preventDefault();
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const message = this.message.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!name || !email || !message || !emailPattern.test(email)) {
+        alert('Please fill all fields with a valid email.');
+        return false;
+      }
+      document.getElementById('form-message').classList.remove('hidden');
+      this.reset();
+      setTimeout(() => document.getElementById('form-message').classList.add('hidden'), 3000);
+      return false;
+    };
+  </script>
+</body>
+
+</html>
+live
